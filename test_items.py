@@ -4,7 +4,7 @@ import time
 
 
 
-def test_guest_should_see_login_link(browser,language):
+def test_add_to_cart_button_is_displayed(browser,language):
     lang = language  #присваиваем переменной lang
     link = f"http://selenium1py.pythonanywhere.com/{lang}/catalogue/coders-at-work_207/"
     browser.get(link)
