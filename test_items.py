@@ -3,7 +3,7 @@ from selenium import webdriver
 import time
 
 
-# @pytest.mark.parametrize('language', ["es", "en-gb"])
+
 def test_guest_should_see_login_link(browser,language):
     lang = language  #присваиваем переменной lang
     link = f"http://selenium1py.pythonanywhere.com/{lang}/catalogue/coders-at-work_207/"
@@ -17,9 +17,6 @@ def test_guest_should_see_login_link(browser,language):
             return True
         except:
             return False
-    # z = is_element_present(browser)
-    # print("zzzzzz= ",z)
-    # assert z == True, "корзинка не найдена"
     assert is_element_present(browser) == True, "корзинка не найдена"
     browser.find_element_by_css_selector(selector).click()
     time.sleep(1)
