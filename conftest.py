@@ -25,5 +25,4 @@ def browser(request):
 @pytest.fixture(scope="function")
 def language(request):
     language = request.config.getoption("language")
-    print("\n выбранный язык = ", language) #проверяем правильность считывания параметра языка
     return language
