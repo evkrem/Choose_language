@@ -12,7 +12,7 @@ def test_guest_should_see_login_link(browser,language):
     time.sleep(1)
     def is_element_present(browser):
         try:
-            browser.implicitly_wait(2)
+            browser.implicitly_wait(30)
             browser.find_element_by_css_selector(selector)
             return True
         except:
